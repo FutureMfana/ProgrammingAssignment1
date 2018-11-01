@@ -1,0 +1,5 @@
+C:\Users\STUDENT\Documents\MyApp (Developed by Me)\ProgrammingAssignment1\ProgrammingAssignment1\bin\Debug\ProgrammingAssignment1.exe
+C:\Users\STUDENT\Documents\MyApp (Developed by Me)\ProgrammingAssignment1\ProgrammingAssignment1\bin\Debug\ProgrammingAssignment1.pdb
+C:\Users\STUDENT\Documents\MyApp (Developed by Me)\ProgrammingAssignment1\ProgrammingAssignment1\obj\Debug\ProgrammingAssignment1.csprojResolveAssemblyReference.cache
+C:\Users\STUDENT\Documents\MyApp (Developed by Me)\ProgrammingAssignment1\ProgrammingAssignment1\obj\Debug\ProgrammingAssignment1.exe
+C:\Users\STUDENT\Documents\MyApp (Developed by Me)\ProgrammingAssignment1\ProgrammingAssignment1\obj\Debug\ProgrammingAssignment1.pdb
