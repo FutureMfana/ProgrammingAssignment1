@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,31 +6,39 @@ using System.Text;
 namespace ProgrammingAssignment1
 {
     class Program
-    {
+    { 
+        //catering for odd numbers
+        private static int[] odd = new int[2];
+        //catering for odd numbers
+        private static int[] even = new int[2];
+        //for tracking number of order numbers and even numbers
+        private static int count_odd = -1, count_even = -1;
+
         static void Main(string[] args)
         {
             Program obj = new Program();
             int[] squares = new int[20];
             squares = obj.getSquares();
 
-            //catering for odd numbers
-            int[] odd = new int[20];
-            //catering for odd numbers
-            int[] even = new int[20];
 	    //I noticed the waste of memory on my arrays, but I noticed after runnig. I didn't know that even and odd
 	    // number will be flipping evenly.
 
-            //for tracking number of order numbers and even numbers
-            int count_odd = -1, count_even = -1;
+            
             Console.WriteLine("First 20 square numbers: ");
             for (int i = 0; i < 20; ++i )
             {
                 if (obj.isEven(squares[i]))
                 {
+                    if (count_even == even.Length - 1){
+                        obj.extendEvenArr();
+                    }
                     even[++count_even] = squares[i];
                 }
                 else
                 {
+                    if (count_odd == odd.Length - 1) {
+                        obj.extendOddArr();
+                    }
                     odd[++count_odd] = squares[i];
                 }
                 Console.WriteLine(squares[i]);
@@ -74,7 +82,7 @@ namespace ProgrammingAssignment1
             return max;
         }
         //produces the sum of odd numbers
-        public int sumOdd(int[] odds, int x)
+        private int sumOdd(int[] odds, int x)
         {
             int sum = 0;
             while (x >= 0){
@@ -104,6 +112,20 @@ namespace ProgrammingAssignment1
                 n_squares[i-1] = i*i;
             }
             return n_squares;
+        }
+        private void extendEvenArr() { 
+            int []newEvenArr = new int[even.Length * 2];
+            for (int i = 0; i < even.Length; ++i) {
+                newEvenArr[i] = even[i];
+            }
+            even = newEvenArr;
+        }
+        private void extendOddArr() { 
+            int []newOddArr = new int[odd.Length * 2];
+            for (int i = 0; i < odd.Length; ++i ) {
+                newOddArr[i] = odd[i];
+            }
+            odd = newOddArr;
         }
     }
 }
